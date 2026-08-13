@@ -1,0 +1,43 @@
+{
+  "name": "tenant-isolation-toolkit",
+  "version": "0.1.0",
+  "description": "Postgres row-level-security multi-tenancy toolkit: connection-level tenant context propagation with isolation enforced at the database layer.",
+  "license": "MIT",
+  "private": true,
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "db:start": "bash scripts/db-start.sh",
+    "db:stop": "bash scripts/db-stop.sh",
+    "lint": "tsx scripts/check-raw-queries.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "start:nestjs-demo": "tsx examples/nestjs-demo/src/main.ts"
+  },
+  "dependencies": {
+    "pg": "^8.11.5"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/core": "^10.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@nestjs/common": { "optional": true },
+    "@nestjs/core": { "optional": true }
+  },
+  "devDependencies": {
+    "@nestjs/common": "^10.4.4",
+    "@nestjs/core": "^10.4.4",
+    "@nestjs/platform-express": "^10.4.4",
+    "@nestjs/testing": "^10.4.4",
+    "@types/node": "^20.14.0",
+    "@types/pg": "^8.11.6",
+    "@types/supertest": "^6.0.2",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1",
+    "supertest": "^7.0.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.5.4",
+    "vitest": "^2.1.1"
+  }
+}

@@ -1,0 +1,12 @@
+node_modules/
+dist/
+coverage/
+*.log
+.DS_Store
+
+# local Postgres test cluster (data dir + unix socket + logs)
+.pgdata/
+
+# env files
+.env
+.env.local
